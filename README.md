@@ -19,16 +19,16 @@ I chose Python as programming language and to test my program I considered sets 
         !pip install networkx
     ```
 3. Run 'Open the correct directiory' cell that contains :
-      ``` bash
+   ``` bash
         %cd Congruence_Closure_Algorithm
-        ```
+   ```
 
 7. Run the 'TEST' cell that contains :
-  ``` bash
+    ``` bash
         !python main_txt.py
     ```
 8. Run the 'TEST' cell that contains :
      ``` bash
         !python main_smt.py
-        ```
+     ```
    
