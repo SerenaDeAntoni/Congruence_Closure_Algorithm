@@ -1,0 +1,7 @@
+f(a, b) = a & f(f(a, b), b) != a or f(f(f(a))) = a & f(f(f(f(f(a))))) = a & f(a) != a or f(f(f(a))) = a
+a=b & b!=a
+f(a)=f(b) & a!=b
+a=b & f(a)!=f(b) 
+f(f(f(a))) = a & f(f(f(f(f(a))))) = a & f(a) != a
+f(f(f(a))) = f(a) & f(f(a)) = a & f(a) != a
+f(a, b) = a & f(f(a, b), b) != a
