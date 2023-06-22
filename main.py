@@ -58,9 +58,9 @@ def main():
                         if l_sat[i] == "SAT":   sat_unsat = "SAT"
                     if sat_unsat == "0":    sat_unsat = "UNSAT"
                 end = timer()
+                print(f"The formula is: {sat_unsat}")
                 print(f'time = {end-start}')
                 print(f'number of merge = {merge}')
-                print(f"The formula is: {sat_unsat}")
                 print('-'*100)
             
             else:

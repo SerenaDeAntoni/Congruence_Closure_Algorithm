@@ -109,7 +109,7 @@ def OR(clause, list_sat):
     s.complete_ccpar()
     #s.visualize_dag()
     res, count = s.solve()
-    #print(f"The formula is: {res}")
+    #print(f"The formula is: {res[]}")
     list_sat.append(res)
     return count
 
@@ -128,9 +128,6 @@ def AND(line):
     res, count = s.solve()
     print(f"The formula is: {res}")
     return count
-
-
-
 
 
 def SMT(filename, parser):

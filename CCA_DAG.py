@@ -116,7 +116,6 @@ class Congruent_Closure_Algorithm_with_DAG:
     def solve(self):
         count = 0
         for eq in self.equalities:
-            #val1, val2 = self.FIND(eq[0]), self.FIND(eq[1])
             val1, val2 = eq[0], eq[1]
             if (val1, val2) in self.forbidden_list: return "UNSAT -> forbidden list", count
             if (val2, val1) in self.forbidden_list: return "UNSAT -> forbidden list", count

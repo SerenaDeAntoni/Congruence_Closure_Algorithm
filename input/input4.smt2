@@ -2,7 +2,7 @@
 (set-logic QF_UF)
 (set-info :source |
 Source: The calcolus of computation (Bradley-Manna) 
-Translator: Andrea Mangrella. |)
+Translator:  |)
 (set-info :category "crafted")
 (set-info :status unsat)
 (declare-sort S1 0)

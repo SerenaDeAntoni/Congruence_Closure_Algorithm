@@ -26,7 +26,7 @@ class Txt_parser():
                 else:
                     final.append(res)
         else:
-            print(f'f = {f}')
+            #print(f'f = {f}')
             final = or_eq_parser(f)
             return final
         return symbol.join(final)
