@@ -3,7 +3,7 @@
 ### Project: Implementation of the congruence closure algorithm
 #### Author: Serena De Antoni VR487515
 
-#Congruence Closure Algorithm with DAG
+**Congruence Closure Algorithm with DAG**
 In this project I implement the congruence closure algorithm with DAG for the satisfiability of a
 set of equalities and inequalities in the quantifier-free fragment of the theory of equality. 
 The algorithm was explained in class and is described in Sect. 9.3 of the Bradley-Manna textbook, and I considered the variant of the forbidden list - when calling MERGE s t if s is in the forbidden list of t or vice versa, return ‘unsat’ – and of the non-arbitrary choice of the representative of the new class in the UNION function - pick the one with the largest ccpar set.
