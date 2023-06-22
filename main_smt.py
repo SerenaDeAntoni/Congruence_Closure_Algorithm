@@ -10,6 +10,7 @@ def main():
     print( "\n*****************************************************************************************" )
     print( "*  Congruence closure algorithm with DAG for the satisfiability of a set of equalities  *" )
     print( "*     and disequalities in the quantifier-free fragment of the theory of equality.      *" ) 
+    print( "*                                  for .smt2 files                                      *" ) 
     print( "*****************************************************************************************" )
 
     filename = "input/input1.smt2"

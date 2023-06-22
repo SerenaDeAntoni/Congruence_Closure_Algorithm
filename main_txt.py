@@ -10,6 +10,7 @@ def main():
     print( "\n*****************************************************************************************" )
     print( "*  Congruence closure algorithm with DAG for the satisfiability of a set of equalities  *" )
     print( "*     and disequalities in the quantifier-free fragment of the theory of equality.      *" ) 
+    print( "*                                  for .txt files                                       *" ) 
     print( "*****************************************************************************************" )
     
     file_test = open('input/input.txt', 'r')
