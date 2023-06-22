@@ -10,6 +10,7 @@ The algorithm was explained in class and is described in Sect. 9.3 of the Bradle
 I chose Python as programming language and to test my program I considered sets of equalities and inequalities from the Bradley-Manna textbook and some benchmarks with “.smt2” extension.
 
 **Running Test**
+Click the link and follow the steps below:  
 - https://colab.research.google.com/drive/1qfILMDw-UJeaZsxnxLntX8vnRkk6gLc7?usp=sharing
 
 1. Run 'Clone + Requirements' cell that contains
