@@ -18,7 +18,17 @@ I chose Python as programming language and to test my program I considered sets 
         !pip install pysmt
         !pip install networkx
     ```
-3. Run 'Open the correct directiory' cell that contains : %cd Congruence_Closure_Algorithm
+3. Run 'Open the correct directiory' cell that contains :
+  ``` bash
+        %cd Congruence_Closure_Algorithm
+    ```
 
-4. Run the 'TEST' cell that contains : !python main_txt.py
-5. Run the 'TEST' cell that contains : !python main_smt.py
+7. Run the 'TEST' cell that contains :
+  ``` bash
+        !python main_txt.py
+   ```
+8. Run the 'TEST' cell that contains :
+     ``` bash
+        !python main_smt.py
+   ```
+   
