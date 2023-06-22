@@ -74,6 +74,8 @@ def main():
 
                 print('-'*100)
 
+                print('AAAAAAAAA')
+
     
     else:
         start = timer()
