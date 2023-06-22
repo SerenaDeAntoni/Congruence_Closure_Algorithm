@@ -26,9 +26,9 @@ I chose Python as programming language and to test my program I considered sets 
 7. Run the 'TEST' cell that contains :
   ``` bash
         !python main_txt.py
-   ```
+    ```
 8. Run the 'TEST' cell that contains :
      ``` bash
         !python main_smt.py
-   ```
+        ```
    
