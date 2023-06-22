@@ -100,17 +100,16 @@ def eq_ineq(equations, atoms_dict):
 def OR(clause, list_sat):
     s = Congruent_Closure_Algorithm_with_DAG()
     parser = Parser(s)
-    clause = clause.replace(' ','')
-    clause = clause.replace('\n','')
+    clause = clause.replace(' ', '').replace('\n', '')
     parser.parse(clause.strip())
     eq, ineq, fl = eq_ineq(clause.strip(), parser.atoms_dict)
     s.add_forbidden_list(fl)
     s.add_eq(eq)
     s.add_ineq(ineq)
     s.complete_ccpar()
-    s.visualize_dag()
+    #s.visualize_dag()
     res, count = s.solve()
-    print(f"The formula is: {res}")
+    #print(f"The formula is: {res}")
     list_sat.append(res)
     return count
 
@@ -125,10 +124,14 @@ def AND(line):
     s.add_eq(eq)
     s.add_ineq(ineq)
     s.complete_ccpar()
-    s.visualize_dag()
+    #s.visualize_dag()
     res, count = s.solve()
     print(f"The formula is: {res}")
     return count
+
+
+
+
 
 def SMT(filename, parser):
     s_smt = Congruent_Closure_Algorithm_with_DAG()
@@ -147,7 +150,7 @@ def SMT(filename, parser):
             s_smt.add_ineq(ineq)
             s_smt.add_forbidden_list(fl)
             s_smt.complete_ccpar()
-            s_smt.visualize_dag()
+            #s_smt.visualize_dag()
             res = s_smt.solve()
             tot_merge += res[1]
             if res[0] == "SAT": return "SAT", string, list_sat, tot_merge

@@ -83,7 +83,7 @@ def main():
         
         print(f"Checking formula: {input}")
         print(f'time = {end-start}')
-        print(f'numero di merge = {merge}')
+        print(f'number of merge = {merge}')
         print(f"The formula is: {res}")
         print('-'*100)
 
