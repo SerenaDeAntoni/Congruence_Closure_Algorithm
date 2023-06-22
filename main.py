@@ -74,14 +74,13 @@ def main():
 
                 print('-'*100)
 
-                print('AAAAAAAAA')
-
     
     else:
         start = timer()
         parser_smt = Txt_parser()
-        res, input, list_sat, merge  = my_alg_SMT(filename, parser_smt)
+        res, input, list_sat, merge  = SMT(filename, parser_smt)
         end = timer()
+        
         print(f"Checking formula: {input}")
         print(f'time = {end-start}')
         print(f'numero di merge = {merge}')

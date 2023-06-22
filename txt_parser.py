@@ -1,3 +1,4 @@
+import networkx as nx
 from pyparsing import nestedExpr
 from CCA_DAG import Node, Congruent_Closure_Algorithm_with_DAG
 import itertools
@@ -107,6 +108,7 @@ def OR(clause, list_sat):
     s.add_eq(eq)
     s.add_ineq(ineq)
     s.complete_ccpar()
+    s.visualize_dag()
     res, count = s.solve()
     print(f"The formula is: {res}")
     list_sat.append(res)
@@ -123,15 +125,15 @@ def AND(line):
     s.add_eq(eq)
     s.add_ineq(ineq)
     s.complete_ccpar()
-    #solver.visualize_dag()
+    s.visualize_dag()
     res, count = s.solve()
     print(f"The formula is: {res}")
     return count
 
-def my_alg_SMT(filename, parser):
-    solver_smt = Congruent_Closure_Algorithm_with_DAG()
+def SMT(filename, parser):
+    s_smt = Congruent_Closure_Algorithm_with_DAG()
     parser_smt = parser
-    my_parser = Parser(solver_smt)
+    my_parser = Parser(s_smt)
     f = parser_smt.parse(filename)
     string = f
     if "or" in f:
@@ -141,11 +143,12 @@ def my_alg_SMT(filename, parser):
         for line in linesOR:
             my_parser.parse(line)
             eq, ineq, fl = eq_ineq(line, my_parser.atoms_dict)
-            solver_smt.add_eq(eq)
-            solver_smt.add_ineq(ineq)
-            solver_smt.add_forbidden_list(fl)
-            solver_smt.complete_ccpar()
-            res = solver_smt.solve()
+            s_smt.add_eq(eq)
+            s_smt.add_ineq(ineq)
+            s_smt.add_forbidden_list(fl)
+            s_smt.complete_ccpar()
+            s_smt.visualize_dag()
+            res = s_smt.solve()
             tot_merge += res[1]
             if res[0] == "SAT": return "SAT", string, list_sat, tot_merge
             else: list_sat.append(res[0])
@@ -153,11 +156,11 @@ def my_alg_SMT(filename, parser):
     else:
         my_parser.parse(f)
         eq, ineq, fl = eq_ineq(f, my_parser.atoms_dict)
-        solver_smt.add_eq(eq)
-        solver_smt.add_ineq(ineq)
-        solver_smt.add_forbidden_list(fl)
-        solver_smt.complete_ccpar()
-        res = solver_smt.solve()
+        s_smt.add_eq(eq)
+        s_smt.add_ineq(ineq)
+        s_smt.add_forbidden_list(fl)
+        s_smt.complete_ccpar()
+        res = s_smt.solve()
         tot_merge = res[1]
         list_sat = [res[0]]
         res_f = res[0]

@@ -40,11 +40,9 @@ def or_eq_parser(input_string):
     symbolOR = "or"
     for clause in clauses:
         matches = re.findall(pattern, clause)
-        #print(f'matches = {matches}')
         matched_formulas = [(match[0], match[1], match[2]) for match in matches]
         symbol = '&'
         result = []
-        #print(f'input_string = {clause}')
 
         for formula in matched_formulas:
             if '!' in formula[0]:
@@ -54,11 +52,5 @@ def or_eq_parser(input_string):
        
         new_clause = symbol.join(result)
         final.append(new_clause)
-        # symbol.join(result)
-        # final.join(symbol)
-        # symbol = '&'
-        #print(f'result = {result}')
-    #print(f'final = {final}')
     parsed = symbolOR.join(final)
-    #print(f'parsed = {parsed}')
     return parsed
