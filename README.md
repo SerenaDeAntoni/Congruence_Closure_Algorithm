@@ -9,7 +9,8 @@ set of equalities and inequalities in the quantifier-free fragment of the theory
 The algorithm was explained in class and is described in Sect. 9.3 of the Bradley-Manna textbook, and I considered the variant of the forbidden list - when calling MERGE s t if s is in the forbidden list of t or vice versa, return ‘unsat’ – and of the non-arbitrary choice of the representative of the new class in the UNION function - pick the one with the largest ccpar set.
 I chose Python as programming language and to test my program I considered sets of equalities and inequalities from the Bradley-Manna textbook and some benchmarks with “.smt2” extension.
 
-**Running Test**
+**Running Test**  
+
 Click the link and follow the steps below:  
 - https://colab.research.google.com/drive/1qfILMDw-UJeaZsxnxLntX8vnRkk6gLc7?usp=sharing
 
